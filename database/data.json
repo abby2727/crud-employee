@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "firstname": "Abdul Fahad",
+        "lastname": "Pangandaman",
+        "birthday": "Sep 20, 1999",
+        "age": 30
+    },
+    {
+        "id": 2,
+        "firstname": "John",
+        "lastname": "Doe",
+        "birthday": "Dec 20, 2000",
+        "age": 22
+    },
+    {
+        "id": 3,
+        "firstname": "Jane",
+        "lastname": "Doe",
+        "birthday": "Jan 20, 1999",
+        "age": 23
+    }
+]

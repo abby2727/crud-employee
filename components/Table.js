@@ -1,4 +1,5 @@
-import { BiEdit, BiTrashAlt } from "react-icons/bi"
+import { BiEdit, BiTrashAlt } from "react-icons/bi";
+import data from '../database/data.json';
 
 const Table = () => {
     return (
@@ -23,27 +24,40 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody className="bg-gray-200">
-                <tr className="bg-gray-50 text-center">
-                    <td className="px-16 py-2">
-                        <span>Abdul Fahad</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <span>Pangandaman</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <span>Sep 28, 1999</span>
-                    </td>
-                    <td className="px-16 py-2">
-                        <span>23</span>
-                    </td>
-                    <td className="px-20 py-2 flex justify-around gap-2">
-                        <button className="cursor"><BiEdit size={25} color={"rgb(34,197,94)"}></BiEdit></button>
-                        <button className="cursor"><BiTrashAlt size={25} color={"rgb(244,63,94)"}></BiTrashAlt></button>
-                    </td>
-                </tr>
+                {
+                    data.map((object, index) =>
+                        <Tr
+                            key={index}
+                            {...object}
+                        />
+                    )
+                }
             </tbody>
         </table>
     )
+}
+
+const Tr = ({ id, firstname, lastname, birthday, age }) => {
+    return (
+        <tr className="bg-gray-50 text-center">
+            <td className="px-16 py-2">
+                <span>{firstname || "Unknown"}</span>
+            </td>
+            <td className="px-16 py-2">
+                <span>{lastname || "Unknown"}</span>
+            </td>
+            <td className="px-16 py-2">
+                <span>{birthday || "Unknown"}</span>
+            </td>
+            <td className="px-16 py-2">
+                <span>{age || "Unknown"}</span>
+            </td>
+            <td className="px-20 py-2 flex justify-around gap-2">
+                <button className="cursor"><BiEdit size={25} color={"rgb(34,197,94)"}></BiEdit></button>
+                <button className="cursor"><BiTrashAlt size={25} color={"rgb(244,63,94)"}></BiTrashAlt></button>
+            </td>
+        </tr>
+    );
 }
 
 export default Table
