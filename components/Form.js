@@ -30,7 +30,10 @@ const Form = () => {
             <div className="input-type">
                 <input type="text" name="age" onChange={setFormData} className="border w-full px-5 py-3 focus:outline-none rounded-md" placeholder="Age" />
             </div>
-            <button className="flex justify-center text-md w-2/6 bg-green-500 text-white px-4 py-2 border rounded-md hover:bg-gray-50 hover:border-green-500 hover:text-green-500">Add</button>
+            <button
+                className="flex justify-center text-md w-2/6 bg-green-500 text-white px-4 py-2 border rounded-md hover:bg-gray-50 hover:border-green-500 hover:text-green-500">
+                Add <span><BiPlus size={25} /></span>
+            </button>
         </form>
     )
 }
