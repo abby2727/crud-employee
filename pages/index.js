@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import { BiUserPlus } from "react-icons/bi";
+import { BiExit, BiUserPlus } from "react-icons/bi";
 import Form from "../components/Form";
 import Table from "../components/Table";
 
@@ -28,7 +28,7 @@ export default function Home() {
             <button
               onClick={() => setVisible(!visible)}
               className={buttonClass()}>
-              {visible ? "Close" : "Add"} <span className='px-1'><BiUserPlus size={23} /></span>
+              {visible ? "Close" : "Add"} <span className='px-1'>{visible ? <BiExit size={23} /> : <BiUserPlus size={23} />}</span>
             </button>
           </div>
         </div>
