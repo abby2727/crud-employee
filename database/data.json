@@ -19,5 +19,12 @@
         "lastname": "Doe",
         "birthday": "Jan 20, 1999",
         "age": 23
+    },
+    {
+        "id": 4,
+        "firstname": "Ben",
+        "lastname": "Gloo",
+        "birthday": "Jan 20, 1980",
+        "age": 23
     }
 ]
